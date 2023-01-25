@@ -1,12 +1,13 @@
 import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import { Layout } from "./components";
+import { Layout, When } from "./components";
 import { Paths } from "./ts/enums";
 
 const Login = lazy(() => import("./views/login"));
 const Templates = lazy(() => import("./views/templates"));
 const Resume = lazy(() => import("./views/resume"));
+const Components = lazy(() => import("./views/components"));
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,16 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <Resume />
+          </Suspense>
+        )
+      },
+      {
+        path: Paths.COMPONENTS,
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <When condition={import.meta.env.DEV}>
+              <Components />
+            </When>
           </Suspense>
         )
       }
