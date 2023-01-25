@@ -1,4 +1,4 @@
-import { DesignVariants, TypeVariants } from "../../ts/enums";
+import { DesignTypes, VariantTypes } from "../../ts/enums";
 import classNames from "classnames";
 
 import { specificVariants, VariantNDesign } from "../../ts/types";
@@ -8,10 +8,10 @@ import { getVariantConditions, getDesignConditions } from "./utils";
 export const useGetClassesByFn = (
   ...initialClasses: Parameters<typeof classNames>
 ): ReturnFn1 | ReturnFn2 => {
-  return (variant?: VariantNDesign | TypeVariants, design?: DesignVariants) => {
+  return (variant?: VariantNDesign | VariantTypes, design?: DesignTypes) => {
     const [foundVariant, foundDesign] = [
-      (typeof variant === "object" ? variant.variant : variant) || TypeVariants.Primary,
-      (typeof variant === "object" ? variant.design : design) || DesignVariants.Filled
+      (typeof variant === "object" ? variant.variant : variant) || VariantTypes.Primary,
+      (typeof variant === "object" ? variant.design : design) || DesignTypes.Filled
     ];
 
     const variantConditions = getVariantConditions(foundVariant);

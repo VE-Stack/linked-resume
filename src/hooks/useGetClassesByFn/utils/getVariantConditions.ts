@@ -1,14 +1,14 @@
-import { TypeVariants } from "../../../ts/enums";
+import { VariantTypes } from "../../../ts/enums";
 
-export const getVariantConditions = (variant: TypeVariants): Record<TypeVariants, boolean> => {
+export const getVariantConditions = (variant: VariantTypes): Record<VariantTypes, boolean> => {
   return {
-    [TypeVariants.Primary]: variant === TypeVariants.Primary,
-    [TypeVariants.Secondary]: variant === TypeVariants.Secondary,
-    [TypeVariants.Success]: variant === TypeVariants.Success,
-    [TypeVariants.Danger]: variant === TypeVariants.Danger,
-    [TypeVariants.Warning]: variant === TypeVariants.Warning,
-    [TypeVariants.Info]: variant === TypeVariants.Info,
-    [TypeVariants.Light]: variant === TypeVariants.Light,
-    [TypeVariants.Dark]: variant === TypeVariants.Dark
+    [VariantTypes.Primary]: variant === VariantTypes.Primary,
+    [VariantTypes.Secondary]: variant === VariantTypes.Secondary,
+    [VariantTypes.Success]: variant === VariantTypes.Success,
+    [VariantTypes.Danger]: variant === VariantTypes.Danger,
+    [VariantTypes.Warning]: variant === VariantTypes.Warning,
+    [VariantTypes.Info]: variant === VariantTypes.Info,
+    [VariantTypes.Light]: variant === VariantTypes.Light,
+    [VariantTypes.Dark]: variant === VariantTypes.Dark
   };
 };

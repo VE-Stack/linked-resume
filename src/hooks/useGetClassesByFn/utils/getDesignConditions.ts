@@ -1,10 +1,10 @@
-import { DesignVariants } from "../../../ts/enums";
+import { DesignTypes } from "../../../ts/enums";
 
-export const getDesignConditions = (design: DesignVariants): Record<DesignVariants, boolean> => {
+export const getDesignConditions = (design: DesignTypes): Record<DesignTypes, boolean> => {
   return {
-    [DesignVariants.Filled]: design === DesignVariants.Filled,
-    [DesignVariants.Outlined]: design === DesignVariants.Outlined,
-    [DesignVariants.Text]: design === DesignVariants.Text,
-    [DesignVariants.Elevated]: design === DesignVariants.Elevated
+    [DesignTypes.Filled]: design === DesignTypes.Filled,
+    [DesignTypes.Outlined]: design === DesignTypes.Outlined,
+    [DesignTypes.Text]: design === DesignTypes.Text,
+    [DesignTypes.Elevated]: design === DesignTypes.Elevated
   };
 };
