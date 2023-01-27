@@ -1,13 +1,79 @@
-import { Link } from "react-router-dom";
+import { Paper, Stack, Button, Typography, useTheme, Box, Tooltip } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 import { Paths } from "../../ts/enums";
+import { Social } from "../../components";
 
 const Login = () => {
+  const theme = useTheme();
+
   return (
-    <div>
-      <h1 className="text-2xl">Login</h1>
-      <Link className="text-lg underline decoration-sky-500" to={Paths.TEMPLATES}>Route to templates</Link>
-    </div>
+    <Stack
+      sx={{
+        height: "100%",
+        alignItems: "center",
+        justifyContent: "center"
+      }}
+    >
+      <Paper
+        sx={{
+          p: 6,
+          maxWidth: theme.spacing(60)
+        }}
+      >
+        <Stack spacing={2} alignItems="center">
+          <Box sx={{ mb: 6 }}>
+            <Typography variant="h5" component="h1" gutterBottom>
+              Choose your social network
+            </Typography>
+            <Typography variant="subtitle2" paragraph gutterBottom>
+              Your resume will be generated based on your selected social network info
+            </Typography>
+            <Stack alignItems="center">
+              <Social
+                sx={{
+                  height: {
+                    xs: "100%",
+                    md: "70%"
+                  },
+                  width: {
+                    xs: "100%",
+                    md: "70%"
+                  }
+                }}
+              />
+            </Stack>
+          </Box>
+          <Button
+            variant="linkedin"
+            startIcon={<LinkedInIcon />}
+            sx={{
+              width: {
+                xs: "100%",
+                md: "70%"
+              }
+            }}
+          >
+            LinkedIn
+          </Button>
+          <Tooltip title="⚠ Still in Developing!">
+            <Button
+              variant="github"
+              startIcon={<GitHubIcon />}
+              sx={{
+                width: {
+                  xs: "100%",
+                  md: "70%"
+                }
+              }}
+            >
+              GitHub
+            </Button>
+          </Tooltip>
+        </Stack>
+      </Paper>
+    </Stack>
   );
 };
 
