@@ -7,7 +7,7 @@ export const paper:Components = {
     },
     styleOverrides: {
       root: {
-        backgroundColor: "rgba(255,255,255, 0.4)",
+        backgroundColor: "rgba(255,255,255, 0.55)",
         backdropFilter: "blur(12px)",
         border: "1px solid rgba(255,255,255,0.1)",
         zIndex: 2
