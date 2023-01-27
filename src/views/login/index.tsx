@@ -18,13 +18,13 @@ const Login = () => {
     >
       <Paper
         sx={{
-          p: 6,
+          p: {xs: 2, md: 6},
           maxWidth: theme.spacing(60)
         }}
       >
         <Stack spacing={2} alignItems="center">
           <Box sx={{ mb: 6 }}>
-            <Typography variant="h5" component="h1" gutterBottom>
+            <Typography variant="h5" component="h1" fontWeight={600} gutterBottom>
               Choose your social network
             </Typography>
             <Typography variant="subtitle2" paragraph gutterBottom>
