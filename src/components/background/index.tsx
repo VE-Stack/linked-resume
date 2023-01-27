@@ -23,8 +23,7 @@ export const Background: FC<PropsWithChildren> = ({ children }) => {
     <Box
       sx={{
         "position": "relative",
-        "backgroundColor":
-          theme.palette.mode === "dark" ? theme.palette.grey[800] : theme.palette.grey[200],
+        "backgroundImage": `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
         "overflow": "hidden",
         ".animation-element": {
           "position": "absolute",
@@ -113,16 +112,16 @@ export const Background: FC<PropsWithChildren> = ({ children }) => {
         }
       }}
     >
-      <LinkedInIcon htmlColor={theme.palette.primary.main} className="animation-element" />
-      <GitHubIcon htmlColor={theme.palette.grey[900]} className="animation-element" />
-      <LinkedInIcon htmlColor={theme.palette.primary.main} className="animation-element" />
-      <GitHubIcon htmlColor={theme.palette.grey[900]} className="animation-element" />
-      <LinkedInIcon htmlColor={theme.palette.primary.main} className="animation-element" />
-      <GitHubIcon htmlColor={theme.palette.grey[900]} className="animation-element" />
-      <LinkedInIcon htmlColor={theme.palette.primary.main} className="animation-element" />
-      <GitHubIcon htmlColor={theme.palette.grey[900]} className="animation-element" />
-      <LinkedInIcon htmlColor={theme.palette.primary.main} className="animation-element" />
-      <GitHubIcon htmlColor={theme.palette.grey[900]} className="animation-element" />
+      <LinkedInIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <GitHubIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <LinkedInIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <GitHubIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <LinkedInIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <GitHubIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <LinkedInIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <GitHubIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <LinkedInIcon htmlColor={theme.palette.common.white} className="animation-element" />
+      <GitHubIcon htmlColor={theme.palette.common.white} className="animation-element" />
       {children}
     </Box>
   );
