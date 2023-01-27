@@ -23,7 +23,7 @@ export const Background: FC<PropsWithChildren> = ({ children }) => {
     <Box
       sx={{
         "position": "relative",
-        "backgroundImage": `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
+        "backgroundImage": `linear-gradient(135deg, ${theme.palette.info.light}, ${theme.palette.info.main}, ${theme.palette.info.dark})`,
         "overflow": "hidden",
         ".animation-element": {
           "position": "absolute",
