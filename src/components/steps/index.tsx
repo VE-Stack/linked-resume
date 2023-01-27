@@ -1,4 +1,4 @@
-import { Step, StepLabel, Stepper, useTheme } from "@mui/material";
+import { Step, StepLabel, Stepper, Typography, useTheme } from "@mui/material";
 import { Children } from "react";
 
 import { steps } from "../../constants";
@@ -27,7 +27,12 @@ export const Steps = () => {
       {Children.toArray(
         steps.map(({ label }) => (
           <Step>
-            <StepLabel StepIconComponent={CustomStepIcon}>{label}</StepLabel>
+            <StepLabel StepIconComponent={CustomStepIcon}>
+              <Typography  sx={{
+                color: theme.palette.common.white,
+                letterSpacing: 0.5
+              }}>{label}</Typography>
+            </StepLabel>
           </Step>
         ))
       )}
