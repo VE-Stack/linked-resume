@@ -1,0 +1,18 @@
+{
+  "name": "@resume/yarn-plugin-load-env",
+  "main": "./sources/index.ts",
+  "scripts": {
+    "build": "rimraf bundles && builder build plugin && yarn fix-naming && yarn import-plugin",
+    "fix-naming": "yarn node scripts/fix-naming.js",
+    "import-plugin": "yarn plugin import ./bundles/@resume/plugin-load-env.js"
+  },
+  "dependencies": {
+    "@yarnpkg/builder": "^4.0.0-rc.34",
+    "@yarnpkg/core": "^4.0.0-rc.34",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@types/rimraf": "^3",
+    "typescript": "4.9.4"
+  }
+}
