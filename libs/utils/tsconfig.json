@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "isolatedModules": false,
+    "lib": ["ESNext", "DOM"],
+    "module": "CommonJS",
+    "outDir": "build/types",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "build"],
+  "extends": "../../tsconfig.base.json",
+  "include": ["src"]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@resume/utils",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./build/cjs/main.js",
+  "module": "./build/esm/main.js",
+  "types": "./build/types/main.d.ts",
+  "scripts": {
+    "prebuild": "rimraf build",
+    "build": "concurrently \"yarn:build:*\"",
+    "build:app": "yarn node scripts/esbuild.js",
+    "build:types": "tsc",
+    "start:dev": "nodemon --watch src --exec \"yarn build:app\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "esbuild": "^0.17.5",
+    "nodemon": "^2.0.20",
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.4"
+  }
+}
