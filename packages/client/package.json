@@ -1,0 +1,40 @@
+{
+  "name": "@resume/client",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "coverage": "vitest run --coverage",
+    "preview": "vite preview",
+    "serve:coverage": "serve coverage",
+    "start:dev": "vite",
+    "pretest": "yarn ts-node-esm ./test/checkTest.ts",
+    "test": "yarn pretest && vitest",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "firebase": "^9.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.7.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@vitejs/plugin-react": "^3.0.0",
+    "@vitest/coverage-c8": "^0.28.1",
+    "autoprefixer": "^10.4.13",
+    "chalk": "^5.2.0",
+    "firebase-tools": "^11.21.0",
+    "glob": "^8.1.0",
+    "jsdom": "^21.1.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0",
+    "vitest": "^0.28.1"
+  },
+  "packageManager": "yarn@3.3.1"
+}
