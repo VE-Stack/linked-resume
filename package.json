@@ -11,6 +11,7 @@
     "build": "yarn workspaces foreach run build",
     "coverage": "",
     "start:dev": "concurrently \"yarn:start:dev:*\"",
+    "start:dev:backend": "yarn workspace @resume/backend run start:dev",
     "start:dev:client": "yarn workspace @resume/client run start:dev",
     "test": "yarn workspaces foreach run test"
   },
