@@ -3,6 +3,7 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "noEmit": true,
+    "target": "ESNext",
     "moduleResolution": "Node",
     "skipLibCheck": true,
     "useDefineForClassFields": true

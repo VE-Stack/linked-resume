@@ -7,6 +7,7 @@ import { Paths } from "./ts/enums";
 const Login = lazy(() => import("./views/login"));
 const Templates = lazy(() => import("./views/templates"));
 const Resume = lazy(() => import("./views/resume"));
+const LinkedinCallback = lazy(() => import("./views/linkedinCallback"));
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ export const router = createBrowserRouter([
         element: (
           <Suspense fallback={<h1>Loading...</h1>}>
             <Resume />
+          </Suspense>
+        )
+      },
+      {
+        path: Paths.LINKEDIN_CALLBACK,
+        element: (
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <LinkedinCallback />
           </Suspense>
         )
       }
