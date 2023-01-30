@@ -223,3 +223,4 @@ dist
 .pnp.*
 
 build
+plugins/yarn-plugin-*/bundles

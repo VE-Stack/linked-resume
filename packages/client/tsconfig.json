@@ -1,22 +1,13 @@
 {
   "compilerOptions": {
-    "allowJs": false,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "noEmit": true,
-    "target": "ESNext",
-    "strict": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "moduleResolution": "Node",
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
     "skipLibCheck": true,
     "useDefineForClassFields": true
   },
-  "exclude": ["test", "node_modules"],
+  "extends": "../../tsconfig.base.json",
   "include": ["src", "@testing-library/jest-dom"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
