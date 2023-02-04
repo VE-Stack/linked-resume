@@ -1,49 +1,35 @@
 {
-  "name": "resume",
+  "name": "@resume/monorepo",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "plugins/*"
+  ],
   "scripts": {
-    "build": "tsc && vite build",
-    "coverage": "vitest run --coverage",
-    "dev": "vite",
-    "preview": "vite preview",
-    "serve:coverage": "serve coverage",
-    "pretest": "yarn ts-node-esm ./test/checkTest.ts",
-    "test": "yarn pretest && vitest",
-    "test:ui": "vitest --ui"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.6",
-    "firebase": "^9.16.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.7.0"
+    "prebuild": "rimraf dist",
+    "build": "yarn workspaces foreach run build",
+    "coverage": "",
+    "start:dev": "concurrently \"yarn:start:dev:*\"",
+    "start:dev:client": "yarn workspace @resume/client run start:dev",
+    "test": "yarn workspaces foreach run test"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
+    "@types/express": "^4.17.13",
     "@types/glob": "^8",
+    "@types/jest": "28.1.8",
+    "@types/node": "^16.0.0",
     "@types/prettier": "^2",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
+    "@types/supertest": "^2.0.11",
     "@types/testing-library__jest-dom": "^5",
-    "@vitejs/plugin-react": "^3.0.0",
-    "@vitest/coverage-c8": "^0.28.1",
-    "chalk": "^5.2.0",
-    "firebase-tools": "^11.21.0",
-    "glob": "^8.1.0",
-    "jsdom": "^21.1.0",
+    "concurrently": "^7.6.0",
+    "nodemon": "^2.0.20",
     "prettier": "^2.8.3",
     "prettier-plugin-packagejson": "^2.4.0",
     "prettier-plugin-tsconfig": "^0.0.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.3",
-    "vite": "^4.0.0",
-    "vitest": "^0.28.1"
+    "rimraf": "^3.0.2"
   },
   "packageManager": "yarn@3.3.1"
 }
